@@ -1,0 +1,133 @@
+/* styles.css - Estilos para tu página "Sobre mí" */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, #000000 0%, #fd0303 100%);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    display: center;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #e10600, #b30000);
+    color: rgb(253, 248, 248);
+    text-align: center;
+    padding: 20px 10px 20px;
+}
+
+header h1 {
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* Secciones generales */
+section {
+    padding: 25px 30px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #e10600;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #e10600;
+    border-radius: 2px;
+}
+
+/* Sección Mis Pasiones */
+.pasiones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.pasion-card {
+    background: #f8f9fa;
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.pasion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(225, 6, 0, 0.15);
+    border-color: #e10600;
+}
+
+.pasion-card .emoji {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.pasion-card h3 {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.pasion-card p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Tarjeta especial para Ferrari */
+.pasion-card.ferrari {
+    border-top: 6px solid #e10600;
+    background: linear-gradient(to bottom, #fff, #fffaf0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 30px;
+    }
+    
+    header {
+        padding: 50px 20px 35px;
+    }
+    
+    header h1 {
+        font-size: 2.3rem;
+    }
+    
+    .pasiones-grid {
+        grid-template-columns: 1fr;
+    }
+}
